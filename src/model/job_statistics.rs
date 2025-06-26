@@ -56,4 +56,7 @@ pub struct JobStatistics {
     pub total_slot_ms: Option<String>,
     #[serde(skip_serializing_if = "Option::is_none")]
     pub transaction_info_template: Option<TransactionInfo>,
+    /// [Output-only] Name of edition corresponding to the reservation for this job at the time of this update.
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub edition: Option<String>,
 }
